@@ -6,9 +6,11 @@ app = Flask(__name__)
 @app.post('/')
 def json_mon():
     data = request.json
+    print(data['system_id'])
     print(data['url'])
     print(data['interval'])
-    print(data['uuid'])
+    print(data['windows_uuid'])
+    print(data['epoch'])
     return {'ok': True}
 
 
