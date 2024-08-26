@@ -25,7 +25,7 @@ stats: object
             bytes_recv: int
 ```
 
-# Install
+# Install on Windows
 
 Download the `SystemMonitorSetupPackage.zip` file.
 
@@ -39,7 +39,7 @@ the `logo.gif` file to change the logo of the application.
 
 Remember to change the `config.toml` file to set the correct system id, server URL, and interval.
 
-# Uninstall
+# Uninstall on Windows
 
 Remove the `C:\Program Files\SystemMonitor` directory.
 Remove the shortcut from the common startup folder `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
