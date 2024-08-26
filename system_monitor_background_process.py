@@ -9,14 +9,28 @@ import tomllib
 import psutil
 import requests
 
-PARENT_DIR = pathlib.Path(__file__).parent
-TOML_FILE = PARENT_DIR / 'config.toml'
 
-if not TOML_FILE.exists():
-    up = PARENT_DIR.parent
-    TOML_FILE = up / 'config.toml'
+def walk_find_config():
+    cwd = pathlib.Path(__file__).parent
 
-CONFIG = tomllib.loads(TOML_FILE.read_text())
+    config = cwd / "config.toml"
+
+    if config.exists():
+        return tomllib.loads(config.read_text())
+
+    for r in range(3):
+        cwd = cwd.parent
+        config = cwd / "config.toml"
+        if config.exists():
+            return tomllib.loads(config.read_text())
+
+    dev_check = pathlib.Path(__file__).parent / "dist" / "config.toml"
+    if dev_check.exists():
+        return tomllib.loads(dev_check.read_text())
+
+    raise FileNotFoundError("config.toml not found")
+
+CONFIG = walk_find_config()
 UUID = None
 
 
@@ -60,15 +74,16 @@ def get_memory_usage() -> float:
 
 def get_windows_uuid() -> str:
     if psutil.WINDOWS:
-        s = subprocess.check_output('wmic csproduct get uuid').strip()
+        create_no_window = 0x08000000
+        s = subprocess.check_output(
+            'wmic csproduct get uuid', creationflags=create_no_window
+        ).strip()
         s = s.decode('ascii').split("\n")
         return s[1].strip()
     return "Not Windows"
 
 
 def gather_info() -> None:
-    global UUID
-
     _disk = disk_usage()
     _processes = get_processes()
     _network_info = get_network_info()
