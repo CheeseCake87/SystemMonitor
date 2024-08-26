@@ -6,10 +6,10 @@ url: str
 interval: int
 windows_uuid: str
 epoch: int
-stats:
+stats: object
     cpu_usage: float
     memory_usage: float
-    disk_usage:
+    disk_usage: object
         total: int
         used: int
         free: int
@@ -18,14 +18,11 @@ stats:
         name: str
         username: str
     network_info: object
-        <network name>:
+        <network name>: object
             ip: str
             netmask: str
             bytes_sent: int
             bytes_recv: int
-    network_usage: object
-        sent: int
-        recv: int
 ```
 
 # Development and Test Setup

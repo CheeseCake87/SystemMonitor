@@ -1,5 +1,5 @@
 #
-# SYSTEM MONITOR
+# SYSTEM MONITOR BACKGROUND PROCESS
 #
 import pathlib
 import subprocess
