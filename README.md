@@ -56,13 +56,13 @@ python -m venv .venv
 Activate the virtual environment:
 
 ```bash
-./.venv/Scrips/activate
+.\.venv\Scrips\activate
 ```
 
 Install the required packages:
 
 ```bash
-pip install -r requirements/main.txt
+pip install -r .\requirements\main.txt
 ```
 
 Run the server:
