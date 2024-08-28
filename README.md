@@ -50,11 +50,11 @@ Go to the settings > apps > System Monitor > uninstall
 
 # Development Environment
 
+## Windows
+
 **NOTE:** pyinstaller is required to build the exe, the exe is only built in a Windows environment.
 
 **NOTE:** Inno Setup is required to build the installer.
-
-## Windows
 
 **Ensure you have python 3.10+ installed.**
 
