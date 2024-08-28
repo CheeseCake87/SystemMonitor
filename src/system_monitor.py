@@ -18,6 +18,7 @@ import requests
 
 # WALK FIND
 
+
 def walk_find_icon() -> Path | None:
     cwd = Path(__file__).parent
 
@@ -33,6 +34,7 @@ def walk_find_icon() -> Path | None:
             return icon
 
     return None
+
 
 def walk_find_logo() -> Path | None:
     cwd = Path(__file__).parent
@@ -253,19 +255,19 @@ def load_gui(config, logo) -> None:
             self.textbox__system_id = tk.Entry(
                 self.grid_frame, textvariable=self.value__system_id
             )
-            self.textbox__system_id.grid(row=0, column=1, sticky=tk.E+tk.W)
+            self.textbox__system_id.grid(row=0, column=1, sticky=tk.E + tk.W)
 
             self.label__url = tk.Label(self.grid_frame, text=f"URL:")
             self.label__url.grid(row=1, column=0, sticky=tk.W)
             self.textbox__url = tk.Entry(self.grid_frame, textvariable=self.value__url)
-            self.textbox__url.grid(row=1, column=1, sticky=tk.E+tk.W)
+            self.textbox__url.grid(row=1, column=1, sticky=tk.E + tk.W)
 
             self.label__interval = tk.Label(self.grid_frame, text=f"Interval:")
             self.label__interval.grid(row=2, column=0, sticky=tk.W)
             self.textbox__interval = tk.Entry(
                 self.grid_frame, textvariable=self.value__interval
             )
-            self.textbox__interval.grid(row=2, column=1, sticky=tk.E+tk.W)
+            self.textbox__interval.grid(row=2, column=1, sticky=tk.E + tk.W)
 
             self.grid_frame.pack(fill=tk.BOTH)
 
@@ -285,7 +287,9 @@ def load_gui(config, logo) -> None:
                     self.textbox__system_id.get(),
                     self.textbox__url.get(),
                     self.textbox__interval.get(),
-                ), padx=20, pady=5
+                ),
+                padx=20,
+                pady=5,
             )
             self.button__save.grid(row=0, column=0, sticky=tk.W)
 
