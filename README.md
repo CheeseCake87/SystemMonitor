@@ -50,6 +50,9 @@ Go to the settings > apps > System Monitor > uninstall
 
 # Development Environment
 
+* [Windows](#windows)
+* [Darwin / GNU/Linux](#darwin--gnulinux)
+
 ## Windows
 
 **NOTE:** pyinstaller is required to build the exe, the exe is only built in a Windows environment.
