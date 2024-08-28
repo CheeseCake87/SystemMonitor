@@ -2,5 +2,4 @@ requests
 pyinstaller
 psutil
 flask
-tkinter
 ruff
