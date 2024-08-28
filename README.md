@@ -148,13 +148,13 @@ source venv/bin/activate
 Install dependencies
 
 ```bash
-pip install -r ./requirements/main.txt
+pip install -r requirements/main.txt
 ```
 
 ### Run the server
 
 ```bash
-flask --app ./server.py run --debug
+flask --app server.py run --debug
 ```
 
 ### Run the GUI app
