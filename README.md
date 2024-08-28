@@ -114,7 +114,7 @@ pyinstaller src/system_monitor.py -w -D --noconsole
 ### Build the installer
 
 1. Install Inno Setup (https://www.jrsoftware.org/isdl.php)
-2. Open the script `inno\Output\system_monitor_setup.iss` in Inno Compiler
+2. Open the script `inno\system_monitor_setup.iss` in Inno Compiler
 3. Click on the Run button
 
 
