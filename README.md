@@ -1,3 +1,15 @@
+# System Monitor
+
+System Monitor is a background service that collects system information and sends it to a server using a POST request.
+
+The data is sent in JSON format.
+
+Settings can be updated in the app.
+
+![img.png](/_assets%2Fimg.png)
+
+**Interval is the amount of time in seconds the app will send a JSON POST request to the URL you set.**
+
 # JSON Sent to Server
 
 ```text
