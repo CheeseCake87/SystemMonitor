@@ -46,3 +46,124 @@ Restart the computer after installation for the background service to start.
 # Uninstall on Windows
 
 Go to the settings > apps > System Monitor > uninstall
+
+
+# Development Environment
+
+**NOTE:** pyinstaller is required to build the exe, the exe is only built in a Windows environment.
+**NOTE:** Inno Setup is required to build the installer.
+
+## Windows
+
+**Ensure you have python 3.10+ installed.**
+
+Navigate to the project directory.
+
+Create virtual environment
+
+```bash
+python -m venv venv
+```
+
+This will create a virtual environment in the project directory, like so:
+
+```text
+ProjectDir/
+    ...
+    README.md
+    venv/
+```
+
+Activate virtual environment
+
+```bash
+.\venv\Scripts\activate
+```
+
+Install dependencies
+
+```bash
+pip install -r .\requirements\main.txt
+```
+
+### Run the server
+
+```bash
+flask --app .\server.py run --debug
+```
+
+### Run the GUI app
+
+```bash
+python .\src\system_monitor.py
+```
+
+### Run the background service
+
+```bash
+python .\src\background_service.py background
+```
+
+### Build the exe
+
+```bash
+pyinstaller src/system_monitor.py -w -D --noconsole
+```
+
+### Build the installer
+
+1. Install Inno Setup (https://www.jrsoftware.org/isdl.php)
+2. Open the script `inno\Output\system_monitor_setup.iss` in Inno Compiler
+3. Click on the Run button
+
+
+## Darwin / GNU/Linux
+
+**Ensure you have python 3.10+ installed.**
+
+Navigate to the project directory.
+
+Create virtual environment
+
+```bash
+python3 -m venv venv
+```
+
+This will create a virtual environment in the project directory, like so:
+
+```text
+ProjectDir/
+    ...
+    README.md
+    venv/
+```
+
+Activate virtual environment
+
+```bash
+source venv/bin/activate
+```
+
+Install dependencies
+
+```bash
+pip install -r ./requirements/main.txt
+```
+
+### Run the server
+
+```bash
+flask --app ./server.py run --debug
+```
+
+### Run the GUI app
+
+```bash
+python3 src/system_monitor.py
+```
+
+### Run the background service
+
+```bash
+python3 src/background_service.py background
+```
