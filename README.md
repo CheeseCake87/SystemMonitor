@@ -102,7 +102,7 @@ python .\src\system_monitor.py
 ### Run the background service
 
 ```bash
-python .\src\background_service.py background
+python .\src\system_monitor.py background
 ```
 
 ### Build the exe
@@ -166,5 +166,5 @@ python3 src/system_monitor.py
 ### Run the background service
 
 ```bash
-python3 src/background_service.py background
+python3 src/system_monitor.py background
 ```
