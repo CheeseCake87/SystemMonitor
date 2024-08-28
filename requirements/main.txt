@@ -3,3 +3,4 @@ pyinstaller
 psutil
 flask
 tkinter
+ruff
