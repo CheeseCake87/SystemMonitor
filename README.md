@@ -108,7 +108,7 @@ python .\src\system_monitor.py background
 ### Build the exe
 
 ```bash
-pyinstaller src/system_monitor.py -w -D --noconsole
+pyinstaller .\src\system_monitor.py -w -D --noconsole
 ```
 
 ### Build the installer
