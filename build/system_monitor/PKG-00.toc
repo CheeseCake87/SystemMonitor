@@ -37,7 +37,7 @@
    'C:\\Users\\Virtual\\PycharmProjects\\MonitorWindows\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth__tkinter.py',
    'PYSOURCE'),
   ('system_monitor',
-   'C:\\Users\\Virtual\\PycharmProjects\\MonitorWindows\\system_monitor.py',
+   'C:\\Users\\Virtual\\PycharmProjects\\MonitorWindows\\src\\system_monitor.py',
    'PYSOURCE')],
  'python312.dll',
  True,

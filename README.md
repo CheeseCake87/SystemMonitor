@@ -27,60 +27,10 @@ stats: object
 
 # Install on Windows
 
-Download the `SystemMonitorSetupPackage.zip` file.
+Download the setup exe in `inno\Output\system_monitor_setup.exe` and run it.
 
-Extract the contents of the zip file, and run the `install\install.exe` file.
-
-This will move the contents on the folder to the `C:\Program Files\SystemMonitor` directory, and
-add a shortcut to the common startup folder (`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`)
-
-You can change the `app.ico` file to change the icon of the application. And you can also change
-the `logo.gif` file to change the logo of the application.
-
-Remember to change the `config.toml` file to set the correct system id, server URL, and interval.
+Restart the computer after installation for the background service to start.
 
 # Uninstall on Windows
 
-Remove the `C:\Program Files\SystemMonitor` directory.
-Remove the shortcut from the common startup folder `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
-
-# Development and Test Setup
-
-Install Python, navigate to the project directory and run the following commands:
-
-```bash
-python -m venv .venv
-
-```
-
-Activate the virtual environment:
-
-```bash
-.\.venv\Scrips\activate
-```
-
-Install the required packages:
-
-```bash
-pip install -r .\requirements\main.txt
-```
-
-Run the server:
-
-```bash
-flask --app server.py run --debug
-```
-
-Run the client:
-
-Option 1, run the .exe found in the `dist\system_monitor` folder.
-
-Option 2, run the following command:
-
-```bash
-python system_monitor.py
-```
-
-The config file is used to set where the stats are sent to, 
-and the interval at which they are sent. You can also set a
-system ID value to identify the system.
+Go to the settings > apps > System Monitor > uninstall
