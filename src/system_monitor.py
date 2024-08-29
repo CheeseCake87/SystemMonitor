@@ -347,7 +347,7 @@ def check_system_id_availability(system_id) -> int:
             config["url"],
             json={
                 "action": "check_system_id",
-                "system_id": system_id,
+                "system_id": system_id.get(),
             }
         )
 
