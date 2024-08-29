@@ -6,7 +6,7 @@ The data is sent in JSON format.
 
 Settings can be updated in the app.
 
-![img.png](/_assets%2Fimg.png)
+![img_1.png](/_assets%2Fimg_1.png)
 
 **Interval is the amount of time in seconds the app will wait before checking and sending.**
 
