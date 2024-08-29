@@ -76,7 +76,7 @@ stats: object
 
 Download the setup exe in `inno\Output\system_monitor_setup.exe` and run it or click here:
 
-[system_monitor_setup.exe](inno%2FOutput%2Fsystem_monitor_setup.exe)
+💿 [system_monitor_setup.exe](https://github.com/CheeseCake87/SystemMonitor/raw/main/inno/Output/system_monitor_setup.exe)
 
 Restart the computer after installation for the background service to start.
 
