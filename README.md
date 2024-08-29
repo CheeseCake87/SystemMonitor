@@ -74,7 +74,9 @@ stats: object
 
 ## Install on Windows
 
-Download the setup exe in `inno\Output\system_monitor_setup.exe` and run it.
+Download the setup exe in `inno\Output\system_monitor_setup.exe` and run it or click here:
+
+[system_monitor_setup.exe](inno%2FOutput%2Fsystem_monitor_setup.exe)
 
 Restart the computer after installation for the background service to start.
 
