@@ -283,12 +283,12 @@ def gui_check_system_id_availability(tki, system_id):
 
     if status == 1:
         with MessageFrame(tki) as message_frame:
-            label = tk.Label(message_frame, text="System ID has not been registered!", fg="green", bg="lightgrey")
+            label = tk.Label(message_frame, text="System ID has NOT been registered!", fg="black", bg="lightgrey")
             label.pack()
 
     if status == 2:
         with MessageFrame(tki) as message_frame:
-            label = tk.Label(message_frame, text="System ID has been registered!", fg="red", bg="lightgrey")
+            label = tk.Label(message_frame, text="System ID has been registered!", fg="black", bg="lightgrey")
             label.pack()
 
 
