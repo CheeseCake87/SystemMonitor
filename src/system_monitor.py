@@ -11,7 +11,7 @@ from sys import argv
 import psutil
 import requests
 
-__version__ = "0.4.1"
+__version__ = "0.4.2"
 
 
 ####################
@@ -513,7 +513,10 @@ def load_gui(config, logo) -> None:
 
         def _set_window(self):
 
-            _height = 160
+            if psutil.WINDOWS:
+                _height = 160
+            else:
+                _height = 200
 
             if GUI_SHOW_LOGO:
                 _height += 120
