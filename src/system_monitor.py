@@ -11,7 +11,7 @@ from sys import argv
 import psutil
 import requests
 
-__version__ = "0.4.2"
+__version__ = "0.4.3"
 
 
 ####################
