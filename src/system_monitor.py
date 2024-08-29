@@ -249,7 +249,7 @@ def get_cpu() -> dict[str, float | int]:
 ####################
 ####################
 
-# GUI CHECK SYSTEM ID AVAILABILITY
+# GUI CHECK URL AVAILABILITY
 
 
 def gui_check_url_availability(tki):
@@ -273,8 +273,8 @@ def gui_check_url_availability(tki):
 # GUI CHECK SYSTEM ID AVAILABILITY
 
 
-def gui_check_system_id_availability(tki):
-    status = check_system_id_availability()
+def gui_check_system_id_availability(tki, system_id):
+    status = check_system_id_availability(system_id)
 
     if status == 0:
         with MessageFrame(tki) as message_frame:
@@ -331,7 +331,7 @@ def check_url_availability() -> int:
 
 # CHECK SYSTEM ID AVAILABILITY
 
-def check_system_id_availability() -> int:
+def check_system_id_availability(system_id) -> int:
     """
     It is expected that the server will return a 204 status code if the system ID is available.
 
@@ -347,7 +347,7 @@ def check_system_id_availability() -> int:
             config["url"],
             json={
                 "action": "check_system_id",
-                "system_id": config["system_id"],
+                "system_id": system_id,
             }
         )
 
@@ -572,7 +572,7 @@ def load_gui(config, logo) -> None:
                         self.button__check = tk.Button(
                             system_id_button_frame,
                             text="Check",
-                            command=lambda: gui_check_system_id_availability(self),
+                            command=lambda: gui_check_system_id_availability(self, self.value__system_id),
                             padx=5,
                             pady=2,
                         )
