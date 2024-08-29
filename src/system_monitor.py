@@ -250,19 +250,19 @@ def load_gui(config, logo) -> None:
             self.grid_frame.columnconfigure(1, weight=1)
             self.grid_frame.columnconfigure(3, weight=1)
 
-            self.label__system_id = tk.Label(self.grid_frame, text=f"System ID:")
+            self.label__system_id = tk.Label(self.grid_frame, text="System ID:")
             self.label__system_id.grid(row=0, column=0, sticky=tk.W)
             self.textbox__system_id = tk.Entry(
                 self.grid_frame, textvariable=self.value__system_id
             )
             self.textbox__system_id.grid(row=0, column=1, sticky=tk.E + tk.W)
 
-            self.label__url = tk.Label(self.grid_frame, text=f"URL:")
+            self.label__url = tk.Label(self.grid_frame, text="URL:")
             self.label__url.grid(row=1, column=0, sticky=tk.W)
             self.textbox__url = tk.Entry(self.grid_frame, textvariable=self.value__url)
             self.textbox__url.grid(row=1, column=1, sticky=tk.E + tk.W)
 
-            self.label__interval = tk.Label(self.grid_frame, text=f"Interval:")
+            self.label__interval = tk.Label(self.grid_frame, text="Interval:")
             self.label__interval.grid(row=2, column=0, sticky=tk.W)
             self.textbox__interval = tk.Entry(
                 self.grid_frame, textvariable=self.value__interval
