@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "System Monitor"
-#define MyAppVersion "0.3.0"
+#define MyAppVersion "0.4.3"
 #define MyAppPublisher "UiliX Ltd"
 #define MyAppURL "https://www.uilix.com/"
 #define MyAppExeName "system_monitor.exe"
