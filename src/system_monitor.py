@@ -513,7 +513,7 @@ def load_gui(config, logo) -> None:
 
         def _set_window(self):
 
-            _height = 200
+            _height = 160
 
             if GUI_SHOW_LOGO:
                 _height += 120
